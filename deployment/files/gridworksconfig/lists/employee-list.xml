@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a">
+	  <pnp:Parameters>
+	    <pnp:Parameter Key="TermGroupName" Required="true"></pnp:Parameter>
+	  </pnp:Parameters>
+  </pnp:Preferences>
+  <pnp:Templates ID="CONTAINER-TEMPLATE-EMPLOYEE-LIST">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-EMPLOYEE-LIST" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Employee Registeration" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Employee Registeration" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Employee Registeration/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Employee Registeration/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Employee Registeration/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{02F328F0-5411-49D2-BE5B-461BFBDF7554}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alle Elemente" Url="/sites/dev-g-O1/Lists/Employee Registeration/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Projects" />
+                <FieldRef Name="Department" />
+                <FieldRef Name="External_x0020_Hiring" />
+                <FieldRef Name="Reporting_x0020_Manager" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Note" DisplayName="Projects_0" StaticName="id6d9d2b52534038a580a01c4b5ac1df" Name="id6d9d2b52534038a580a01c4b5ac1df" ID="{cde8267d-170b-41c2-8e52-c6d13d6436ba}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ColName="ntext2" RowOrdinal="0" />
+            <Field DisplayName="Description" Format="Dropdown" MaxLength="255" Title="Description" Type="Text" ID="{ea30805b-1757-4c6e-bd25-f4bfa218fda9}" SourceID="{{listid:Employee Registeration}}" StaticName="Description" Name="Description" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="TaxonomyFieldType" DisplayName="Projects" List="{listid:TaxonomyHiddenList}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" ID="{2d6d9d2b-5253-4038-a580-a01c4b5ac1df}" SourceID="{{listid:Employee Registeration}}" StaticName="Projects" Name="Projects" ColName="int1" RowOrdinal="0" Version="1">
+              <Default />
+              <Customization>
+                <ArrayOfProperty>
+                  <Property>
+                    <Name>SspId</Name>
+                    <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+                  </Property>
+                  <Property>
+                    <Name>GroupId</Name>
+                  </Property>
+                  <Property>
+                    <Name>TermSetId</Name>
+                    <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Projektart}</Value>
+                  </Property>
+                  <Property>
+                    <Name>AnchorId</Name>
+                    <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+                  </Property>
+                  <Property>
+                    <Name>UserCreated</Name>
+                    <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>Open</Name>
+                    <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>TextField</Name>
+                    <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{cde8267d-170b-41c2-8e52-c6d13d6436ba}</Value>
+                  </Property>
+                  <Property>
+                    <Name>IsPathRendered</Name>
+                    <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>IsKeyword</Name>
+                    <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>TargetTemplate</Name>
+                  </Property>
+                  <Property>
+                    <Name>CreateValuesInEditForm</Name>
+                    <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterAssemblyStrongName</Name>
+                    <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterClassName</Name>
+                    <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterMethodName</Name>
+                    <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+                  </Property>
+                  <Property>
+                    <Name>FilterJavascriptProperty</Name>
+                    <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+                  </Property>
+                </ArrayOfProperty>
+              </Customization>
+            </Field>
+            <Field DisplayName="Department" FillInChoice="FALSE" Format="Dropdown" Title="Department" Type="Choice" ID="{6bb19df8-7c8e-4d0f-ac56-09796a2fafb0}" SourceID="{{listid:Employee Registeration}}" StaticName="Department" Name="Department" ColName="nvarchar5" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>U220</CHOICE>
+                <CHOICE>U230</CHOICE>
+                <CHOICE>U250</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field DisplayName="External Hiring" Format="Dropdown" Title="External Hiring" Type="Boolean" ID="{5f828a2f-11f8-4cf9-b678-f289f57c8d15}" SourceID="{{listid:Employee Registeration}}" StaticName="External_x0020_Hiring" Name="External_x0020_Hiring" ColName="bit1" RowOrdinal="0">
+              <Default>0</Default>
+            </Field>
+            <Field DisplayName="Reporting Manager" Format="Dropdown" List="UserInfo" Title="Reporting Manager" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{8190587c-aa6a-4ad1-a9a9-59e685a88f9a}" SourceID="{{listid:Employee Registeration}}" StaticName="Reporting_x0020_Manager" Name="Reporting_x0020_Manager" ColName="int3" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3a6b296c-3f50-445c-a13f-9c679ea9dda3" Name="ComplianceAssetId" DisplayName="Complianceobjekt-ID" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Bezeichnungseinstellung" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Bezeichnungen" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Bezeichnung angewendet" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Bezeichnung angewendet von" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Element ist eine Aufzeichnung" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
