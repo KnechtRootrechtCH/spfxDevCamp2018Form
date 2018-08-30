@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "packageManager": "pnpm",
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.5.1",
+    "libraryName": "spfx-dev-camp-2018-form",
+    "libraryId": "034d7867-e6af-4533-9190-03b1c84558b0",
+    "componentType": "webpart"
+  }
+}

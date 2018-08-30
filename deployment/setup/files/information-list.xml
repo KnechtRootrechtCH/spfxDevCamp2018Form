@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/01/ProvisioningSchema">
+     <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.23.1802.0, Culture=neutral, PublicKeyToken=5e633289e95c321a">
+	  <pnp:Parameters>
+	    <pnp:Parameter Key="TermGroupName" Required="true"></pnp:Parameter>
+	  </pnp:Parameters>
+    </pnp:Preferences> 
+    <pnp:Templates ID="GW365-PROVISIONING">
+    <pnp:ProvisioningTemplate ID="INFORMATION-LIST" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:SiteFields>
+        <Field Type="Note" DisplayName="gwArea_0" StaticName="g9dc2ed8b89144a0b948d24a57b4bb74" Name="g9dc2ed8b89144a0b948d24a57b4bb74" ID="{83a8eb23-2c3a-412a-8a53-dc00ce966c3c}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" />
+        <Field Type="Note" DisplayName="gwFolder_0" StaticName="j4f9a0b862c042979b1eaff6d090c3b6" Name="j4f9a0b862c042979b1eaff6d090c3b6" ID="{37ebc820-7fc5-486d-bfa5-b4adcc079f0b}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" />
+        <Field Type="Note" DisplayName="gwCustomer_0" StaticName="d31befb2b72c4659b75ad8cc37f0efb8" Name="d31befb2b72c4659b75ad8cc37f0efb8" ID="{326ec239-61fb-41ca-9bc0-90953deed7e1}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" />
+        <Field Type="Boolean" DisplayName="Externer Zugriff" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="GRIDWORKS" ID="{83b65032-22fa-4c9e-b523-33e2a9cc65be}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwExternalSharing" Name="gwExternalSharing" CustomFormatter="" Required="FALSE">
+          <Default>0</Default>
+        </Field>
+		<Field Type="Text" DisplayName="Kürzel" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="20" Group="GRIDWORKS" ID="{22a22882-6b8d-45e8-95b6-c81c4e95673f}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwShortName" Name="gwShortName" CustomFormatter="">
+        </Field>        		
+        <Field Type="TaxonomyFieldType" DisplayName="Kunde" List="{{listid:TaxonomyHiddenList}}" WebId="bb25b01e-e045-422d-a869-f09e5c57e2b9" ShowField="Term1031" Description="Kunde" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{d31befb2-b72c-4659-b75a-d8cc37f0efb8}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwCustomer" Name="gwCustomer">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Kunden}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{326ec239-61fb-41ca-9bc0-90953deed7e1}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="Ablage" List="{{listid:TaxonomyHiddenList}}" WebId="bb25b01e-e045-422d-a869-f09e5c57e2b9" ShowField="Term1031" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{34f9a0b8-62c0-4297-9b1e-aff6d090c3b6}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwFolder" Name="gwFolder">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Ablage}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{37ebc820-7fc5-486d-bfa5-b4adcc079f0b}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="Bereich" List="{{listid:TaxonomyHiddenList}}" WebId="bb25b01e-e045-422d-a869-f09e5c57e2b9" ShowField="Term1031" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{09dc2ed8-b891-44a0-b948-d24a57b4bb74}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwArea" Name="gwArea">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Bereich}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{83a8eb23-2c3a-412a-8a53-dc00ce966c3c}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="Boolean" DisplayName="Microsoft Teams" Description="Teams Chat Workspace erstellen" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="GRIDWORKS" ID="{630962d8-ac6c-454e-9973-e2d046eea4b5}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwTeams" Name="gwTeams" CustomFormatter="" Required="FALSE">
+          <Default>0</Default>
+        </Field>
+      </pnp:SiteFields>
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C50" Name="Basis-Information" Description="Ein neues Listenelement erstellen." Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" />
+            <pnp:FieldRef ID="83b65032-22fa-4c9e-b523-33e2a9cc65be" Name="gwExternalSharing" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C5000612C16B71623493C8A1F257BCBF6C9D7" Name="Arbeitsgruppe-Information" Description="Ein neues Listenelement erstellen." Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" />
+            <pnp:FieldRef ID="83b65032-22fa-4c9e-b523-33e2a9cc65be" Name="gwExternalSharing" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C5000EB1C61F7B5BF4DFDAE9526D917CEF0AB" Name="Projekt-Information" Description="Ein neues Listenelement erstellen." Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" />
+            <pnp:FieldRef ID="83b65032-22fa-4c9e-b523-33e2a9cc65be" Name="gwExternalSharing" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" />
+            <pnp:FieldRef ID="09dc2ed8-b891-44a0-b948-d24a57b4bb74" Name="gwArea" />
+            <pnp:FieldRef ID="326ec239-61fb-41ca-9bc0-90953deed7e1" Name="d31befb2b72c4659b75ad8cc37f0efb8" Hidden="true" />
+            <pnp:FieldRef ID="d31befb2-b72c-4659-b75a-d8cc37f0efb8" Name="gwCustomer" />
+            <pnp:FieldRef ID="83a8eb23-2c3a-412a-8a53-dc00ce966c3c" Name="g9dc2ed8b89144a0b948d24a57b4bb74" Hidden="true" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C50006E80AE2937864C609BF8C72D1F9EDFC3" Name="Kunde-Information" Description="" Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Hidden="true" />
+            <pnp:FieldRef ID="d31befb2-b72c-4659-b75a-d8cc37f0efb8" Name="gwCustomer" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" Hidden="true" />
+            <pnp:FieldRef ID="83b65032-22fa-4c9e-b523-33e2a9cc65be" Name="gwExternalSharing" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="326ec239-61fb-41ca-9bc0-90953deed7e1" Name="d31befb2b72c4659b75ad8cc37f0efb8" Hidden="true" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+      <pnp:Lists>
+        <pnp:ListInstance Title="Information" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Information" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Information/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Information/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Information/NewForm.aspx" ImageUrl="{site}/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0100AD911DC115B64D77B477D5B723182C5000EB1C61F7B5BF4DFDAE9526D917CEF0AB" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0100AD911DC115B64D77B477D5B723182C5000612C16B71623493C8A1F257BCBF6C9D7" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0100AD911DC115B64D77B477D5B723182C50006E80AE2937864C609BF8C72D1F9EDFC3" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{32728F6A-0CE6-40AF-9885-614E5CBD1058}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alle Elemente" Url="/Lists/Information/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{3a6b296c-3f50-445c-a13f-9c679ea9dda3}" Hidden="FALSE" ReadOnly="TRUE" Required="FALSE" Type="Text" Name="ComplianceAssetId" ShowInFileDlg="FALSE" DisplayName="Complianceobjekt-ID" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ComplianceAssetId" FromBaseType="TRUE" ColName="nvarchar3" />
+            <Field ID="{ccc1037f-f65e-434a-868e-8c98af31fe29}" Name="_ComplianceFlags" DisplaceOnUpgrade="TRUE" Hidden="FALSE" ReadOnly="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="Bezeichnungseinstellung" List="Docs" FieldRef="ID" ShowField="ComplianceFlags" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SchemaVersion="16.0.93.0" RecreateIfMissing="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ComplianceFlags" FromBaseType="TRUE" />
+            <Field ID="{d4b6480a-4bed-4094-9a52-30181ea38f1d}" Name="_ComplianceTag" DisplaceOnUpgrade="TRUE" Hidden="FALSE" ReadOnly="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="Bezeichnungen" List="Docs" FieldRef="ID" ShowField="ComplianceTag" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SchemaVersion="16.0.93.0" RecreateIfMissing="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ComplianceTag" FromBaseType="TRUE" />
+            <Field ID="{92be610e-ddbb-49f4-b3b1-5c2bc768df8f}" Name="_ComplianceTagWrittenTime" DisplaceOnUpgrade="TRUE" Hidden="FALSE" ReadOnly="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="Bezeichnung angewendet" List="Docs" FieldRef="ID" ShowField="ComplianceTagWrittenTime" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SchemaVersion="16.0.93.0" RecreateIfMissing="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ComplianceTagWrittenTime" FromBaseType="TRUE" />
+            <Field ID="{418d7676-2d6f-42cf-a16a-e43d2971252a}" Name="_ComplianceTagUserId" DisplaceOnUpgrade="TRUE" Hidden="FALSE" ReadOnly="TRUE" ShowInFileDlg="FALSE" Type="Lookup" DisplayName="Bezeichnung angewendet von" List="Docs" FieldRef="ID" ShowField="ComplianceTagUserId" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SchemaVersion="16.0.93.0" RecreateIfMissing="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ComplianceTagUserId" FromBaseType="TRUE" />
+            <Field ID="{8382d247-72a9-44b1-9794-7b177edc89f3}" Type="Computed" ReadOnly="TRUE" Name="_IsRecord" DisplayName="Element ist eine Aufzeichnung" DisplaceOnUpgrade="TRUE" SchemaVersion="16.0.93.0" RecreateIfMissing="TRUE" NoCustomize="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_IsRecord" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="_ComplianceFlags" />
+              </FieldRefs>
+              <DisplayPattern>
+                <Switch>
+                  <Expr>
+                    <LookupColumn Name="_ComplianceFlags" />
+                  </Expr>
+                  <Case Value="1">
+                    <HTML>Ja</HTML>
+                  </Case>
+                  <Case Value="3">
+                    <HTML>Ja</HTML>
+                  </Case>
+                  <Default>
+                    <HTML>Nein</HTML>
+                  </Default>
+                </Switch>
+              </DisplayPattern>
+            </Field>
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="326ec239-61fb-41ca-9bc0-90953deed7e1" Name="d31befb2b72c4659b75ad8cc37f0efb8" Hidden="true" DisplayName="gwCustomer_0" />
+            <pnp:FieldRef ID="83a8eb23-2c3a-412a-8a53-dc00ce966c3c" Name="g9dc2ed8b89144a0b948d24a57b4bb74" Hidden="true" DisplayName="gwArea_0" />
+            <pnp:FieldRef ID="09dc2ed8-b891-44a0-b948-d24a57b4bb74" Name="gwArea" DisplayName="Bereich" />
+            <pnp:FieldRef ID="d31befb2-b72c-4659-b75a-d8cc37f0efb8" Name="gwCustomer" DisplayName="Kunde" />
+            <pnp:FieldRef ID="83b65032-22fa-4c9e-b523-33e2a9cc65be" Name="gwExternalSharing" DisplayName="Externer Zugriff" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" DisplayName="Microsoft Teams" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" DisplayName="Kürzel" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

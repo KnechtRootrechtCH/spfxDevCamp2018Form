@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "b8e54bd2-454c-4b1d-90b1-852355cc44eb",
+  "alias": "RequestFormWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "React Formular" },
+    "description": { "default": "Erstellt eine Eintrag in einer Liste" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "React Formular"
+    }
+  }]
+}

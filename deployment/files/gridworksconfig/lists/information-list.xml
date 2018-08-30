@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a">
+	  <pnp:Parameters>
+	    <pnp:Parameter Key="TermGroupName" Required="true"></pnp:Parameter>
+	  </pnp:Parameters>
+  </pnp:Preferences>
+  <pnp:Templates ID="CONTAINER-TEMPLATE-2794CAD4322E4777944F5F1B31732517">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-2794CAD4322E4777944F5F1B31732517" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Information" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Information" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Information/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Information/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Information/NewForm.aspx" ImageUrl="{site}/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0100AD911DC115B64D77B477D5B723182C5000EB1C61F7B5BF4DFDAE9526D917CEF0AB" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{81B17CD8-FBA2-455E-B4E8-8C87076C335E}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alle Elemente" Url="{site}/Lists/Information/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="gwSiteType" />
+                <FieldRef Name="gwSiteProvisionStatus" />
+                <FieldRef Name="ContentType" />
+                <FieldRef Name="gwSiteTemplateId" />
+                <FieldRef Name="gwShortName" />
+                <FieldRef Name="gwWebUrl" />
+                <FieldRef Name="gwNoExternalSharing" />
+                <FieldRef Name="gwSiteClassification" />
+                <FieldRef Name="gwLanguage" />
+                <FieldRef Name="gwArea" />
+                <FieldRef Name="gwSiteOwner" />
+                <FieldRef Name="gwSiteMember" />
+                <FieldRef Name="gwSiteStatus" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="71e77804-c18a-4085-b6cc-b0f1e26de8d9" Name="o2759638e250473abeb6a6e9223a8379" Hidden="true" DisplayName="gwProjectPhase_0" />
+            <pnp:FieldRef ID="9e620ba8-0f03-45a6-a0f7-3990feaa8df8" Name="n4fdc9f526b84eda9c004bccd34e852f" Hidden="true" DisplayName="gwDigitalActivity_0" />
+            <pnp:FieldRef ID="1a25ef49-8a37-4804-997b-d0ee087d22b3" Name="o7f60ce9ffe04b51b57beb9571f23940" Hidden="true" DisplayName="gwProjectType_0" />
+            <pnp:FieldRef ID="9a3141ec-af55-476f-9e3a-ee210de2a6e0" Name="fb6cbbf305554826b922c5834b22cc3a" Hidden="true" DisplayName="gwProjectDomain_0" />
+            <pnp:FieldRef ID="1390a86a-23da-45f0-8efe-ef36edadfb39" Name="TaxKeywordTaxHTField" Hidden="true" DisplayName="TaxKeywordTaxHTField" />
+            <pnp:FieldRef ID="b1da9e28-a236-4459-a519-da05f7cf1024" Name="i9031beaa42347d58e54da17df65f36f" Hidden="true" DisplayName="gwSiteStatus_0" />
+            <pnp:FieldRef ID="83a8eb23-2c3a-412a-8a53-dc00ce966c3c" Name="g9dc2ed8b89144a0b948d24a57b4bb74" Hidden="true" DisplayName="gwArea_0" />
+            <pnp:FieldRef ID="746411bf-ae63-4812-ba11-e231b1005a67" Name="gwSiteDescription" DisplayName="Beschreibung" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" DisplayName="Kürzel" />
+            <pnp:FieldRef ID="09dc2ed8-b891-44a0-b948-d24a57b4bb74" Name="gwArea" DisplayName="Bereich" />
+            <pnp:FieldRef ID="b97d8c72-c051-4307-a14a-7f0df18bd311" Name="gwLanguage" DisplayName="Hauptsprache" />
+            <pnp:FieldRef ID="2302668c-5dec-4939-8169-e1b432f560bf" Name="gwSiteOwner" DisplayName="Verantwortlich" />
+            <pnp:FieldRef ID="d8d849c7-bbdd-4d12-b589-de8144e426e2" Name="gwSiteMember" DisplayName="Mitglied" />
+            <pnp:FieldRef ID="d8ef3b49-3ec3-468d-8e53-e3656d7e7cb4" Name="gwNoExternalSharing" DisplayName="Intern" />
+            <pnp:FieldRef ID="39f21b28-658f-4c36-a880-3e1a15e954b0" Name="gwSiteClassification" DisplayName="Site-Klassifizierung" />
+            <pnp:FieldRef ID="29031bea-a423-47d5-8e54-da17df65f36f" Name="gwSiteStatus" DisplayName="Ablagestatus" />
+            <pnp:FieldRef ID="9f862823-cccd-4b12-91fb-a0abf80d9823" Name="gwSiteProvisionStatus" DisplayName="Site-Provisioning Status" />
+            <pnp:FieldRef ID="e9af4a1a-a307-4c4f-968c-d8a90928e5d8" Name="gwSiteType" DisplayName="Site-Template" />
+            <pnp:FieldRef ID="e73bd231-f7ff-4172-b96d-0d2cc7deabde" Name="gwSiteTemplateId" DisplayName="Site-Template-Id" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" DisplayName="Microsoft Teams" />
+            <pnp:FieldRef ID="546fdd20-d934-40ae-8572-5e177f55105e" Name="gwPrivate" DisplayName="Private Gruppe" />
+            <pnp:FieldRef ID="b9df46af-8e74-4c7e-b953-703aaafc73e1" Name="gwWebUrl" DisplayName="Website" />
+            <pnp:FieldRef ID="42742dcf-9a2a-4f2f-838d-687b26265367" Name="gwprStatus" DisplayName="Provisioning Status" />
+            <pnp:FieldRef ID="77ec932c-5ff4-46ce-ba39-c2900de770e4" Name="gwprLog" DisplayName="Provisioning Log" />
+            <pnp:FieldRef ID="23f27201-bee3-471e-b2e7-b64fd8b7ca38" Name="TaxKeyword" DisplayName="Unternehmensstichwörter" />
+            <pnp:FieldRef ID="a333e5ac-d6ce-4914-a306-cf62e07bf354" Name="gwProjectStart" DisplayName="Geplanter Start" />
+            <pnp:FieldRef ID="3440defa-0205-462e-99ed-183cf771bd97" Name="gwProjectEnd" DisplayName="Geplanter Abschluss" />
+            <pnp:FieldRef ID="746ed91f-e770-44eb-a200-c805205c196a" Name="gwProjectLead" DisplayName="Projektleiter" />
+            <pnp:FieldRef ID="33a713b3-c4c5-4f80-afe7-0e48bf7d9ac9" Name="gwPSPElement" DisplayName="PSP-Element" />
+            <pnp:FieldRef ID="3d3495d8-7882-4971-9420-a10167d8a9cf" Name="gwProjectSize" DisplayName="Umfang" />
+            <pnp:FieldRef ID="fb6cbbf3-0555-4826-b922-c5834b22cc3a" Name="gwProjectDomain" DisplayName="Projektdomäne" />
+            <pnp:FieldRef ID="87f60ce9-ffe0-4b51-b57b-eb9571f23940" Name="gwProjectType" DisplayName="Projektart" />
+            <pnp:FieldRef ID="74fdc9f5-26b8-4eda-9c00-4bccd34e852f" Name="gwDigitalActivity" DisplayName="Digitale Handlungsfelder" />
+            <pnp:FieldRef ID="82759638-e250-473a-beb6-a6e9223a8379" Name="gwProjectPhase" DisplayName="Aktuelle Phase" />
+            <pnp:FieldRef ID="7b057730-a0db-445e-bf2f-dfc0748ea14e" Name="gwProjectPrio" DisplayName="Projekt Priorität" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.26.1805.1, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Localizations>
+    <pnp:Localization LCID="1033" Name="English (United States)" ResourceFile="information-items.en-US.resx" />
+    <pnp:Localization LCID="1031" Name="Deutsch (Deutschland)" ResourceFile="information-items.de-DE.resx" />
+    <pnp:Localization LCID="1036" Name="français (France)" ResourceFile="information-items.fr-FR.resx" />
+    <pnp:Localization LCID="1040" Name="italiano (Italia)" ResourceFile="information-items.it-IT.resx" />
+  </pnp:Localizations>
+  <pnp:Templates ID="CONTAINER-TEMPLATE-9AFCB91DC3E741F2ACA85A23E642CCD1">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-9AFCB91DC3E741F2ACA85A23E642CCD1" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:Properties>
+        <pnp:Property Key="TermGroupName" Value="gw365dev" />
+      </pnp:Properties>
+      <pnp:SupportedUILanguages>
+        <pnp:SupportedUILanguage LCID="1033" />
+        <pnp:SupportedUILanguage LCID="1031" />
+        <pnp:SupportedUILanguage LCID="1036" />
+        <pnp:SupportedUILanguage LCID="1040" />
+      </pnp:SupportedUILanguages>
+      <pnp:SiteFields>
+        <Field Type="Note" DisplayName="{res:Field_gwDigitalActivity_0_DisplayName}" StaticName="n4fdc9f526b84eda9c004bccd34e852f" Name="n4fdc9f526b84eda9c004bccd34e852f" ID="{9e620ba8-0f03-45a6-a0f7-3990feaa8df8}" ShowInViewForms="FALSE" Required="FALSE" CanToggleHidden="TRUE" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" AllowDeletion="TRUE" Hidden="TRUE" />
+        <Field Type="Note" DisplayName="{res:Field_gwProjectDomain_0_DisplayName}" StaticName="fb6cbbf305554826b922c5834b22cc3a" Name="fb6cbbf305554826b922c5834b22cc3a" ID="{9a3141ec-af55-476f-9e3a-ee210de2a6e0}" ShowInViewForms="FALSE" Required="FALSE" CanToggleHidden="TRUE" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" AllowDeletion="TRUE" Hidden="TRUE" />
+        <Field Type="Note" DisplayName="{res:Field_gwSiteStatus_0_DisplayName}" StaticName="i9031beaa42347d58e54da17df65f36f" Name="i9031beaa42347d58e54da17df65f36f" ID="{b1da9e28-a236-4459-a519-da05f7cf1024}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" />
+        <Field Type="Note" DisplayName="{res:Field_gwProjectType_0_DisplayName}" StaticName="o7f60ce9ffe04b51b57beb9571f23940" Name="o7f60ce9ffe04b51b57beb9571f23940" ID="{1a25ef49-8a37-4804-997b-d0ee087d22b3}" ShowInViewForms="FALSE" Required="FALSE" CanToggleHidden="TRUE" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" AllowDeletion="TRUE" Hidden="TRUE" />
+        <Field Type="Note" DisplayName="{res:Field_gwArea_0_DisplayName}" StaticName="g9dc2ed8b89144a0b948d24a57b4bb74" Name="g9dc2ed8b89144a0b948d24a57b4bb74" ID="{83a8eb23-2c3a-412a-8a53-dc00ce966c3c}" ShowInViewForms="FALSE" Required="FALSE" CanToggleHidden="TRUE" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" Hidden="TRUE" />
+        <Field Type="Note" DisplayName="{res:Field_gwProjectPhase_0_DisplayName}" StaticName="o2759638e250473abeb6a6e9223a8379" Name="o2759638e250473abeb6a6e9223a8379" ID="{71e77804-c18a-4085-b6cc-b0f1e26de8d9}" ShowInViewForms="FALSE" Required="FALSE" CanToggleHidden="TRUE" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" AllowDeletion="TRUE" Hidden="TRUE" />
+        <Field ID="{36193413-DD5C-4096-8C1E-1B40098B9BA3}" Name="_OriginalSourceSiteId" StaticName="_OriginalSourceSiteId" DisplayName="{res:Field_Original_Source_Site_ID_DisplayName}" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field Type="User" DisplayName="{res:Field_Projektleiter_DisplayName}" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Group="GRIDWORKS" ID="{746ed91f-e770-44eb-a200-c805205c196a}" SourceID="{{siteid}}" StaticName="gwProjectLead" Name="gwProjectLead" AllowDeletion="TRUE" />
+        <Field Type="Boolean" DisplayName="{res:Field_Private_Gruppe_DisplayName}" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="GRIDWORKS" ID="{546fdd20-d934-40ae-8572-5e177f55105e}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwPrivate" Name="gwPrivate" CustomFormatter="" Required="FALSE" AllowDeletion="TRUE" Description="{res:Field_Private_Gruppe_Description}">
+          <Default>0</Default>
+        </Field>
+        <Field Type="URL" DisplayName="{res:Field_Provisioning_Log_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" Group="GRIDWORKS" ID="{77ec932c-5ff4-46ce-ba39-c2900de770e4}" SourceID="{721163f6-8986-4e30-bcf6-0e9d2f99c90c}" StaticName="gwprLog" Name="gwprLog" CustomFormatter="">
+        </Field>
+        <Field ID="{0E7B982F-698A-4D0C-AACB-F16906F66D30}" Name="_OriginalSourceUrl" StaticName="_OriginalSourceUrl" DisplayName="{res:Field_Ursprüngliche_Quell-URL_DisplayName}" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field Type="Choice" DisplayName="{res:Field_Projekt_Priorität_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="GRIDWORKS" ID="{7b057730-a0db-445e-bf2f-dfc0748ea14e}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwProjectPrio" Name="gwProjectPrio" CustomFormatter="" AllowDeletion="TRUE">
+          <Default>1</Default>
+          <CHOICES>
+            <CHOICE>1</CHOICE>
+            <CHOICE>2</CHOICE>
+            <CHOICE>3</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="{res:Field_Aktuelle_Phase_DisplayName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{82759638-e250-473a-beb6-a6e9223a8379}" SourceID="{{siteid}}" StaticName="gwProjectPhase" Name="gwProjectPhase" AllowDeletion="TRUE">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Projektphasen}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{71e77804-c18a-4085-b6cc-b0f1e26de8d9}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field ID="{91E86A43-75F2-426F-80DA-35EDFB47D55D}" Name="_OriginalSourceItemId" StaticName="_OriginalSourceItemId" DisplayName="{res:Field_Original_Source_Item_ID_DisplayName}" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field Type="Boolean" DisplayName="{res:Field_Intern_DisplayName}" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="GRIDWORKS" ID="{d8ef3b49-3ec3-468d-8e53-e3656d7e7cb4}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwNoExternalSharing" Name="gwNoExternalSharing" CustomFormatter="" Required="FALSE" AllowDeletion="TRUE" Description="{res:Field_Intern_Description}">
+          <Default>0</Default>
+        </Field>
+        <Field Type="Choice" DisplayName="{res:Field_Hauptsprache_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="GRIDWORKS" ID="{b97d8c72-c051-4307-a14a-7f0df18bd311}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwLanguage" Name="gwLanguage" Description="{res:Field_Hauptsprache_Description}" CustomFormatter="" AllowDeletion="TRUE">
+          <Default>d</Default>
+          <CHOICES>
+            <CHOICE>d</CHOICE>
+            <CHOICE>f</CHOICE>
+            <CHOICE>i</CHOICE>
+            <CHOICE>e</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field ID="{139DA674-DBF6-439F-98E0-4EB05FA9A669}" Name="_OriginalSourceListId" StaticName="_OriginalSourceListId" DisplayName="{res:Field_Original_Source_List_ID_DisplayName}" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field Type="Text" DisplayName="{res:Field_Kürzel_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="20" Group="GRIDWORKS" ID="{22a22882-6b8d-45e8-95b6-c81c4e95673f}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwShortName" Name="gwShortName" CustomFormatter="" AllowDeletion="TRUE" Description="{res:Field_Kürzel_Description}">
+        </Field>
+        <Field Type="UserMulti" DisplayName="{res:Field_Verantwortlich_DisplayName}" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Group="GRIDWORKS" ID="{2302668c-5dec-4939-8169-e1b432f560bf}" SourceID="{{siteid}}" StaticName="gwSiteOwner" Name="gwSiteOwner" AllowDeletion="TRUE" Description="{res:Field_Verantwortlich_Description}" Mult="TRUE" Sortable="FALSE" />
+        <Field Type="UserMulti" DisplayName="{res:Field_gwSiteMember_DisplayName}" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Group="GRIDWORKS" ID="{d8d849c7-bbdd-4d12-b589-de8144e426e2}" SourceID="{{siteid}}" StaticName="gwSiteMember" Name="gwSiteMember" AllowDeletion="TRUE" Description="{res:Field_gwSiteMember_Description}" Mult="TRUE" Sortable="FALSE" />
+        <Field Type="DateTime" DisplayName="{res:Field_Geplanter_Start_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" Group="GRIDWORKS" FriendlyDisplayFormat="Disabled" ID="{a333e5ac-d6ce-4914-a306-cf62e07bf354}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwProjectStart" Name="gwProjectStart" CustomFormatter="" CalType="0" AllowDeletion="TRUE">
+        </Field>
+        <Field Type="URL" DisplayName="{res:Field_Website_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" Group="GRIDWORKS" ID="{b9df46af-8e74-4c7e-b953-703aaafc73e1}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwWebUrl" Name="gwWebUrl" CustomFormatter="" AllowDeletion="TRUE" />
+        <Field Type="Text" DisplayName="{res:Field_PSP-Element_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="GRIDWORKS" ID="{33a713b3-c4c5-4f80-afe7-0e48bf7d9ac9}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwPSPElement" Name="gwPSPElement" CustomFormatter="" AllowDeletion="TRUE">
+        </Field>
+        <Field ID="{3477A5BC-C605-4B2E-A7C1-8DB8F13C017E}" Name="_OriginalSourceWebId" StaticName="_OriginalSourceWebId" DisplayName="{res:Field_Original_Source_Web_ID_DisplayName}" Type="Guid" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" AllowDeletion="FALSE" />
+        <Field Type="Note" DisplayName="{res:Field_Beschreibung_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" IsolateStyles="TRUE" Sortable="FALSE" Group="GRIDWORKS" ID="{746411bf-ae63-4812-ba11-e231b1005a67}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwSiteDescription" Name="gwSiteDescription" CustomFormatter="" RestrictedMode="TRUE" AppendOnly="FALSE" UnlimitedLengthInDocumentLibrary="FALSE" AllowDeletion="TRUE" Description="{res:Field_Beschreibung_Description}">
+        </Field>
+        <Field Type="Text" DisplayName="{res:Field_Provisioning_Status_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="GRIDWORKS" ID="{42742dcf-9a2a-4f2f-838d-687b26265367}" SourceID="{721163f6-8986-4e30-bcf6-0e9d2f99c90c}" StaticName="gwprStatus" Name="gwprStatus" CustomFormatter="">
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="{res:Field_Bereich_DisplayName}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{09dc2ed8-b891-44a0-b948-d24a57b4bb74}" SourceID="{{siteid}}" StaticName="gwArea" Name="gwArea" List="{{listid:TaxonomyHiddenList}}" AllowDeletion="TRUE" Description="{res:Field_Bereich_Description}">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Organisation}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{83a8eb23-2c3a-412a-8a53-dc00ce966c3c}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="Boolean" DisplayName="{res:Field_Microsoft_Teams_DisplayName}" Description="{res:Field_Microsoft_Teams_Description}" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="GRIDWORKS" ID="{630962d8-ac6c-454e-9973-e2d046eea4b5}" SourceID="{bb25b01e-e045-422d-a869-f09e5c57e2b9}" StaticName="gwTeams" Name="gwTeams" CustomFormatter="" Required="FALSE" AllowDeletion="TRUE">
+          <Default>0</Default>
+        </Field>
+        <Field Type="Choice" DisplayName="{res:Field_Umfang_DisplayName}" Description="{res:Field_Umfang_Description}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="GRIDWORKS" ID="{3d3495d8-7882-4971-9420-a10167d8a9cf}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwProjectSize" Name="gwProjectSize" CustomFormatter="" AllowDeletion="TRUE">
+          <CHOICES>
+            <CHOICE>S</CHOICE>
+            <CHOICE>M</CHOICE>
+            <CHOICE>L</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="{res:Field_Projektart_DisplayName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{87f60ce9-ffe0-4b51-b57b-eb9571f23940}" SourceID="{{siteid}}" StaticName="gwProjectType" Name="gwProjectType" AllowDeletion="TRUE">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Projektart}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{1a25ef49-8a37-4804-997b-d0ee087d22b3}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="{res:Field_Ablagestatus_DisplayName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{29031bea-a423-47d5-8e54-da17df65f36f}" SourceID="{{siteid}}" StaticName="gwSiteStatus" Name="gwSiteStatus" AllowDeletion="TRUE" Description="{res:Field_Ablagestatus_Description}">
+          <Default>1;#aktiv|2e14f642-e37f-4588-b28e-2654e2163f9e</Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Ablagestatus}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{b1da9e28-a236-4459-a519-da05f7cf1024}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="{res:Field_Projektdomäne_DisplayName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{fb6cbbf3-0555-4826-b922-c5834b22cc3a}" SourceID="{{siteid}}" StaticName="gwProjectDomain" Name="gwProjectDomain" AllowDeletion="TRUE">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Projektdomäne}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{9a3141ec-af55-476f-9e3a-ee210de2a6e0}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="TaxonomyFieldTypeMulti" DisplayName="{res:Field_Digitale_Handlungsfelder_DisplayName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="GRIDWORKS" ID="{74fdc9f5-26b8-4eda-9c00-4bccd34e852f}" SourceID="{{siteid}}" StaticName="gwDigitalActivity" Name="gwDigitalActivity" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:{parameter:TermGroupName}:Digitale Handlungsfelder}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{9e620ba8-0f03-45a6-a0f7-3990feaa8df8}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="DateTime" DisplayName="{res:Field_Geplanter_Abschluss_DisplayName}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" Group="GRIDWORKS" FriendlyDisplayFormat="Disabled" ID="{3440defa-0205-462e-99ed-183cf771bd97}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwProjectEnd" Name="gwProjectEnd" CustomFormatter="" CalType="0" AllowDeletion="TRUE">
+        </Field>
+        <Field Type="Choice" DisplayName="{res:Field_gwSiteType_DisplayName}" Description="{res:Field_gwSiteType_Description}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="GRIDWORKS" ID="{e9af4a1a-a307-4c4f-968c-d8a90928e5d8}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwSiteType" Name="gwSiteType" CustomFormatter="" AllowDeletion="TRUE">
+          <Default>TeamSite</Default>
+          <CHOICES>
+            <CHOICE>TeamSite</CHOICE>
+            <CHOICE>CommunicationSite</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="Choice" DisplayName="{res:Field_gwSiteProvisionStatus_DisplayName}" Description="{res:Field_gwSiteProvisionStatus_Description}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="GRIDWORKS" ID="{9f862823-cccd-4b12-91fb-a0abf80d9823}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwSiteProvisionStatus" Name="gwSiteProvisionStatus" CustomFormatter="" AllowDeletion="TRUE">
+          <Default>Pending</Default>
+          <CHOICES>
+            <CHOICE>Pending</CHOICE>
+            <CHOICE>Failed</CHOICE>
+            <CHOICE>Cancelled</CHOICE>
+            <CHOICE>Provisioned</CHOICE>
+            <CHOICE>Running</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="Choice" DisplayName="{res:Field_gwSiteClassification_DisplayName}" Description="{res:Field_gwSiteClassification_Description}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="GRIDWORKS" ID="{39f21b28-658f-4c36-a880-3e1a15e954b0}" SourceID="{485990f8-13e5-47d1-8730-63e52a0c12ba}" StaticName="gwSiteClassification" Name="gwSiteClassification" CustomFormatter="" AllowDeletion="TRUE">
+          <Default>intern</Default>
+          <CHOICES>
+            <CHOICE>intern</CHOICE>
+            <CHOICE>extern</CHOICE>
+            <CHOICE>vertraulich</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="Text" DisplayName="{res:Field_gwSiteTemplateId_DisplayName}" Description="{res:Field_gwSiteTemplateId_Description}" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="GRIDWORKS" ID="{e73bd231-f7ff-4172-b96d-0d2cc7deabde}" SourceID="{721163f6-8986-4e30-bcf6-0e9d2f99c90c}" StaticName="gwSiteTemplateId" Name="gwSiteTemplateId" CustomFormatter="">
+        </Field>
+      </pnp:SiteFields>
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C50" Name="{res:ContentType_Basis-Information_Title}" Description="{res:ContentType_Basis-Information_Description}" Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" />
+            <pnp:FieldRef ID="746411bf-ae63-4812-ba11-e231b1005a67" Name="gwSiteDescription" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" />
+            <pnp:FieldRef ID="09dc2ed8-b891-44a0-b948-d24a57b4bb74" Name="gwArea" />
+            <pnp:FieldRef ID="b97d8c72-c051-4307-a14a-7f0df18bd311" Name="gwLanguage" />
+            <pnp:FieldRef ID="2302668c-5dec-4939-8169-e1b432f560bf" Name="gwSiteOwner" />
+            <pnp:FieldRef ID="d8d849c7-bbdd-4d12-b589-de8144e426e2" Name="gwSiteMember" />
+            <pnp:FieldRef ID="d8ef3b49-3ec3-468d-8e53-e3656d7e7cb4" Name="gwNoExternalSharing" />
+            <pnp:FieldRef ID="39f21b28-658f-4c36-a880-3e1a15e954b0" Name="gwSiteClassification" />
+            <pnp:FieldRef ID="29031bea-a423-47d5-8e54-da17df65f36f" Name="gwSiteStatus" />
+            <pnp:FieldRef ID="9f862823-cccd-4b12-91fb-a0abf80d9823" Name="gwSiteProvisionStatus" />
+            <pnp:FieldRef ID="e9af4a1a-a307-4c4f-968c-d8a90928e5d8" Name="gwSiteType" />
+            <pnp:FieldRef ID="e73bd231-f7ff-4172-b96d-0d2cc7deabde" Name="gwSiteTemplateId" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="546fdd20-d934-40ae-8572-5e177f55105e" Name="gwPrivate" />
+            <pnp:FieldRef ID="b9df46af-8e74-4c7e-b953-703aaafc73e1" Name="gwWebUrl" />
+            <pnp:FieldRef ID="42742dcf-9a2a-4f2f-838d-687b26265367" Name="gwprStatus" />
+            <pnp:FieldRef ID="77ec932c-5ff4-46ce-ba39-c2900de770e4" Name="gwprLog" />
+            <pnp:FieldRef ID="b1da9e28-a236-4459-a519-da05f7cf1024" Name="i9031beaa42347d58e54da17df65f36f" Hidden="true" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+            <pnp:FieldRef ID="83a8eb23-2c3a-412a-8a53-dc00ce966c3c" Name="g9dc2ed8b89144a0b948d24a57b4bb74" Hidden="true" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" />
+			      <pnp:FieldRef ID="1390a86a-23da-45f0-8efe-ef36edadfb39" Name="TaxKeywordTaxHTField" Hidden="true" />
+            <pnp:FieldRef ID="23f27201-bee3-471e-b2e7-b64fd8b7ca38" Name="TaxKeyword" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C5000612C16B71623493C8A1F257BCBF6C9D7" Name="{res:ContentType_Arbeitsgruppe-Information_Title}" Description="{res:ContentType_Arbeitsgruppe-Information_Description}" Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" />
+            <pnp:FieldRef ID="746411bf-ae63-4812-ba11-e231b1005a67" Name="gwSiteDescription" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" />
+            <pnp:FieldRef ID="09dc2ed8-b891-44a0-b948-d24a57b4bb74" Name="gwArea" />
+            <pnp:FieldRef ID="b97d8c72-c051-4307-a14a-7f0df18bd311" Name="gwLanguage" />
+            <pnp:FieldRef ID="2302668c-5dec-4939-8169-e1b432f560bf" Name="gwSiteOwner" />
+            <pnp:FieldRef ID="d8d849c7-bbdd-4d12-b589-de8144e426e2" Name="gwSiteMember" />
+            <pnp:FieldRef ID="d8ef3b49-3ec3-468d-8e53-e3656d7e7cb4" Name="gwNoExternalSharing" />
+            <pnp:FieldRef ID="39f21b28-658f-4c36-a880-3e1a15e954b0" Name="gwSiteClassification" />
+            <pnp:FieldRef ID="29031bea-a423-47d5-8e54-da17df65f36f" Name="gwSiteStatus" />
+            <pnp:FieldRef ID="9f862823-cccd-4b12-91fb-a0abf80d9823" Name="gwSiteProvisionStatus" />
+            <pnp:FieldRef ID="e9af4a1a-a307-4c4f-968c-d8a90928e5d8" Name="gwSiteType" />
+            <pnp:FieldRef ID="e73bd231-f7ff-4172-b96d-0d2cc7deabde" Name="gwSiteTemplateId" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="546fdd20-d934-40ae-8572-5e177f55105e" Name="gwPrivate" />
+            <pnp:FieldRef ID="b9df46af-8e74-4c7e-b953-703aaafc73e1" Name="gwWebUrl" />
+            <pnp:FieldRef ID="42742dcf-9a2a-4f2f-838d-687b26265367" Name="gwprStatus" />
+            <pnp:FieldRef ID="77ec932c-5ff4-46ce-ba39-c2900de770e4" Name="gwprLog" />
+            <pnp:FieldRef ID="b1da9e28-a236-4459-a519-da05f7cf1024" Name="i9031beaa42347d58e54da17df65f36f" Hidden="true" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+            <pnp:FieldRef ID="83a8eb23-2c3a-412a-8a53-dc00ce966c3c" Name="g9dc2ed8b89144a0b948d24a57b4bb74" Hidden="true" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" />
+			      <pnp:FieldRef ID="1390a86a-23da-45f0-8efe-ef36edadfb39" Name="TaxKeywordTaxHTField" Hidden="true" />
+            <pnp:FieldRef ID="23f27201-bee3-471e-b2e7-b64fd8b7ca38" Name="TaxKeyword" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x0100AD911DC115B64D77B477D5B723182C5000EB1C61F7B5BF4DFDAE9526D917CEF0AB" Name="{res:ContentType_PPM-Projekt_Title}" Description="{res:ContentType_PPM-Projekt_Description}" Group="GRIDWORKS" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" />
+            <pnp:FieldRef ID="746411bf-ae63-4812-ba11-e231b1005a67" Name="gwSiteDescription" />
+            <pnp:FieldRef ID="22a22882-6b8d-45e8-95b6-c81c4e95673f" Name="gwShortName" />
+            <pnp:FieldRef ID="09dc2ed8-b891-44a0-b948-d24a57b4bb74" Name="gwArea" />
+            <pnp:FieldRef ID="b97d8c72-c051-4307-a14a-7f0df18bd311" Name="gwLanguage" />
+            <pnp:FieldRef ID="2302668c-5dec-4939-8169-e1b432f560bf" Name="gwSiteOwner" />
+            <pnp:FieldRef ID="d8d849c7-bbdd-4d12-b589-de8144e426e2" Name="gwSiteMember" />
+            <pnp:FieldRef ID="d8ef3b49-3ec3-468d-8e53-e3656d7e7cb4" Name="gwNoExternalSharing" />
+            <pnp:FieldRef ID="39f21b28-658f-4c36-a880-3e1a15e954b0" Name="gwSiteClassification" />
+            <pnp:FieldRef ID="29031bea-a423-47d5-8e54-da17df65f36f" Name="gwSiteStatus" />
+            <pnp:FieldRef ID="9f862823-cccd-4b12-91fb-a0abf80d9823" Name="gwSiteProvisionStatus" />
+            <pnp:FieldRef ID="e9af4a1a-a307-4c4f-968c-d8a90928e5d8" Name="gwSiteType" />
+            <pnp:FieldRef ID="e73bd231-f7ff-4172-b96d-0d2cc7deabde" Name="gwSiteTemplateId" />
+            <pnp:FieldRef ID="630962d8-ac6c-454e-9973-e2d046eea4b5" Name="gwTeams" />
+            <pnp:FieldRef ID="546fdd20-d934-40ae-8572-5e177f55105e" Name="gwPrivate" />
+            <pnp:FieldRef ID="b9df46af-8e74-4c7e-b953-703aaafc73e1" Name="gwWebUrl" />
+            <pnp:FieldRef ID="42742dcf-9a2a-4f2f-838d-687b26265367" Name="gwprStatus" />
+            <pnp:FieldRef ID="77ec932c-5ff4-46ce-ba39-c2900de770e4" Name="gwprLog" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" />
+            <pnp:FieldRef ID="b1da9e28-a236-4459-a519-da05f7cf1024" Name="i9031beaa42347d58e54da17df65f36f" Hidden="true" />
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+            <pnp:FieldRef ID="a333e5ac-d6ce-4914-a306-cf62e07bf354" Name="gwProjectStart" />
+            <pnp:FieldRef ID="3440defa-0205-462e-99ed-183cf771bd97" Name="gwProjectEnd" />
+            <pnp:FieldRef ID="746ed91f-e770-44eb-a200-c805205c196a" Name="gwProjectLead" />
+            <pnp:FieldRef ID="33a713b3-c4c5-4f80-afe7-0e48bf7d9ac9" Name="gwPSPElement" />
+            <pnp:FieldRef ID="3d3495d8-7882-4971-9420-a10167d8a9cf" Name="gwProjectSize" />
+            <pnp:FieldRef ID="9a3141ec-af55-476f-9e3a-ee210de2a6e0" Name="fb6cbbf305554826b922c5834b22cc3a" Hidden="true" />
+            <pnp:FieldRef ID="fb6cbbf3-0555-4826-b922-c5834b22cc3a" Name="gwProjectDomain" />
+            <pnp:FieldRef ID="1a25ef49-8a37-4804-997b-d0ee087d22b3" Name="o7f60ce9ffe04b51b57beb9571f23940" Hidden="true" />
+            <pnp:FieldRef ID="87f60ce9-ffe0-4b51-b57b-eb9571f23940" Name="gwProjectType" />
+            <pnp:FieldRef ID="9e620ba8-0f03-45a6-a0f7-3990feaa8df8" Name="n4fdc9f526b84eda9c004bccd34e852f" Hidden="true" />
+            <pnp:FieldRef ID="74fdc9f5-26b8-4eda-9c00-4bccd34e852f" Name="gwDigitalActivity" />
+            <pnp:FieldRef ID="71e77804-c18a-4085-b6cc-b0f1e26de8d9" Name="o2759638e250473abeb6a6e9223a8379" Hidden="true" />
+            <pnp:FieldRef ID="82759638-e250-473a-beb6-a6e9223a8379" Name="gwProjectPhase" />
+            <pnp:FieldRef ID="7b057730-a0db-445e-bf2f-dfc0748ea14e" Name="gwProjectPrio" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" />
+            <pnp:FieldRef ID="83a8eb23-2c3a-412a-8a53-dc00ce966c3c" Name="g9dc2ed8b89144a0b948d24a57b4bb74" Hidden="true" />
+            <pnp:FieldRef ID="1390a86a-23da-45f0-8efe-ef36edadfb39" Name="TaxKeywordTaxHTField" Hidden="true" />
+            <pnp:FieldRef ID="23f27201-bee3-471e-b2e7-b64fd8b7ca38" Name="TaxKeyword" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
